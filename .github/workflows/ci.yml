@@ -4,9 +4,9 @@ on:
 
 jobs:
   job1:
-    outputs:
-      url: ${{ steps.step1.url }}
     runs-on: ubuntu-latest
+    outputs:
+      url: ${{ steps.step1.outputs.url }}
     steps:
       - name: Step 1
         id: step1
