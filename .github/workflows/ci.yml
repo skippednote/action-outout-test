@@ -11,7 +11,7 @@ jobs:
       - name: ENV
         run: |
           echo ${GITHUB_REF##*/}
-          echo "${{ github }}" | jq '.ref'
+          echo $GITHUB | jq '.ref'
       - name: Step 1
         id: step1
         run: echo "::set-output name=url::bassam"
