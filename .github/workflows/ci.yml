@@ -8,6 +8,8 @@ jobs:
     outputs:
       url: ${{ steps.step1.outputs.url }}
     steps:
+      - name: ENV
+        run: echo $github
       - name: Step 1
         id: step1
         run: echo "::set-output name=url::bassam"
