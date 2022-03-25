@@ -9,7 +9,9 @@ jobs:
       url: ${{ steps.step1.outputs.url }}
     steps:
       - name: ENV
-        run: echo ${GITHUB_REF##*/}
+        run: |
+          echo ${GITHUB_REF##*/}
+          echo $GITHUB
       - name: Step 1
         id: step1
         run: echo "::set-output name=url::bassam"
